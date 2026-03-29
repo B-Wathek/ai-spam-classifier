@@ -1,6 +1,6 @@
 from src.model import SpamClassifier
+from sklearn.metrics import accuracy_score
 
-# Simple dataset
 texts = [
     "Win a free iPhone",
     "Hello how are you",
@@ -13,5 +13,12 @@ labels = ["spam", "ham", "spam", "ham"]
 model = SpamClassifier()
 model.train(texts, labels)
 
-predictions = model.predict(["Free prize now"])
-print(predictions)
+preds = model.predict(texts)
+
+acc = accuracy_score(labels, preds)
+
+print("Accuracy:", acc)
+
+# 🚨 CI GATE
+if acc < 0.9:
+    raise Exception("Model accuracy below threshold!"))
