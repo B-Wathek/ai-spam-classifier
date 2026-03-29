@@ -13,7 +13,7 @@ A release is considered READY when:
 
 ## Artifacts
 - [ ] PRD.md completed
-- [ ] Eval report موجود في /reports
+- [ ] Eval report in /reports
 - [ ] DataSpec, SRS, Monitoring filled
 
 ## Reproducibility
