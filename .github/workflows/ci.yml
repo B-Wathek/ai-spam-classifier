@@ -21,8 +21,11 @@ jobs:
       run: |
         pip install scikit-learn pytest
 
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/src" >> $GITHUB_ENV
+
     - name: Run tests
-      run: pytest
+      run: pytest -v tests/
 
     - name: Run training (gate)
       run: python pipelines/train.py
