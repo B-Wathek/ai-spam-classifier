@@ -26,3 +26,5 @@ This document defines the release-ready criteria for the AI Spam Classifier proj
 - All changes committed and pushed to GitHub.
 - Homework submitted via a **Pull Request** with this branch.
 - PR shows green CI status checks.
+
+# PR submission trigger
