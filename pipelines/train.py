@@ -21,4 +21,4 @@ print("Accuracy:", acc)
 
 # 🚨 CI GATE
 if acc < 0.9:
-    raise Exception("Model accuracy below threshold!"))
+    raise Exception("Model accuracy below threshold!")
