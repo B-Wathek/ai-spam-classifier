@@ -19,7 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install scikit-learn pytest
+        pip install scikit-learn pytest pandas
 
     - name: Set PYTHONPATH
       run: echo "PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/src" >> $GITHUB_ENV
