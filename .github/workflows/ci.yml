@@ -15,14 +15,17 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: 3.12
 
     - name: Install dependencies
       run: |
-        pip install scikit-learn pytest
+        pip install scikit-learn pytest pandas
+
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/src" >> $GITHUB_ENV
 
     - name: Run tests
-      run: pytest
+      run: pytest -v tests/
 
     - name: Run training (gate)
       run: python pipelines/train.py
